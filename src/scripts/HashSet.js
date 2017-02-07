@@ -28,7 +28,10 @@ function Set(){
 	}
 
 	this.contains = function(element){
-		if(typeof set[element] == "undefined"){
+		if(typeof element == "object" && element != null){
+			element = JSON.stringify(element)
+		}
+		if(typeof set[element] == "undefined" || typeof element == "undefined" || typeof element == "function"){
 			return false;
 		}
 		return true;

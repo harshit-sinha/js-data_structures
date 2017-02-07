@@ -23,5 +23,5 @@ gulp.task('browserSync', function() {
 gulp.task('default', ['js'], function(){
     gulp.watch('src/scripts/*.js', function(){
         gulp.run('js');
-    })
+    });
 });
